@@ -1,10 +1,10 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 10.6.4.154
+Source Server         : 
 Source Server Version : 50626
-Source Host           : 10.6.4.154:3306
-Source Database       : zhx_online
+Source Host           : 
+Source Database       : 
 
 Target Server Type    : MYSQL
 Target Server Version : 50626
