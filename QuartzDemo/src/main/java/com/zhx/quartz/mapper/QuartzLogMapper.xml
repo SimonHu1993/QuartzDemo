@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhx.quartz.mapper.QuartzLogMapper" >
+  <select id="selectByPrimaryKey" resultType="com.zhx.quartz.domain.QuartzLog" parameterType="java.util.HashMap" >
+    select  * from quartz_log
+    where 1=1
+    <if test="id !=null">and  id = #{id,jdbcType=BIGINT}</if>
+    order by id desc
+  </select>
+
+  <insert id="insert" parameterType="com.zhx.quartz.domain.QuartzLog" >
+    insert into quartz_log (id, bean_name,
+      cron_expression, is_success, job_name, 
+      method_name, params, time,
+      exception_detail)
+    values (#{id,jdbcType=BIGINT}, #{beanName,jdbcType=VARCHAR},
+      #{cronExpression,jdbcType=VARCHAR}, #{isSuccess,jdbcType=BIT}, #{jobName,jdbcType=VARCHAR}, 
+      #{methodName,jdbcType=VARCHAR}, #{params,jdbcType=VARCHAR}, #{time,jdbcType=BIGINT},
+      #{exceptionDetail,jdbcType=LONGVARCHAR})
+  </insert>
+
+</mapper>

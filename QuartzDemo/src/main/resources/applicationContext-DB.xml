@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	    http://cxf.apache.org/jaxws
+        http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <!-- 引入jdbc配置文件 -->
+    <context:property-placeholder location="classpath:systemconfig.properties"/>
+    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:systemconfig.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="properties" ref="configProperties"/>
+    </bean>
+
+    <!-- 数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" init-method="getConnection"
+          destroy-method="close">
+        <property name="user" value="${mjdbc_username}"/>
+        <property name="password" value="${mjdbc_password}"/>
+        <property name="jdbcUrl" value="${mjdbc_url}"/>
+        <property name="driverClass" value="${mjdbc_driverClassName}"/>
+        <!-- 系统初始化连接数 -->
+        <property name="initialPoolSize" value="${mjdbc_initialSize}"/>
+        <!-- 最大连接数 -->
+        <property name="maxPoolSize" value="${mjdbc_maxActive}"/>
+        <!-- 最小连接数 -->
+        <property name="minPoolSize" value="${mjdbc_minActive}"/>
+        <!--最大空闲时间,600秒（10分钟）内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+        <property name="maxIdleTime" value="180"/>
+        <property name="maxIdleTimeExcessConnections" value="170"/>
+        <!-- 一个连接空闲状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟 -->
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+        <property name="acquireIncrement" value="10"/>
+        <!--每60秒检查所有连接池中的空闲连接。Default: 0 -->
+        <property name="idleConnectionTestPeriod" value="120"/>
+        <!-- 每次从pool内checkout连接时测试有效性（同步操作）
+            程序每次数据库调用都连接有效性，若无效关闭此连接并剔除出pool，
+           从pool内取其他连接，慎用，会造成至少多一倍的数据库调用。Default：false -->
+        <property name="testConnectionOnCheckout" value="false"/>
+        <!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->
+        <property name="acquireRetryAttempts" value="30"/>
+        <!--两次连接中间隔时间，单位毫秒。Default: 1000 -->
+        <property name="acquireRetryDelay" value="1000"/>
+    </bean>
+
+    <!-- mybatis文件配置，扫描所有mapper文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:MyBatis-Configuration.xml"></property>
+        <property name="typeAliasesPackage" value="acc.entity"></property>
+        <property name="plugins">
+            <list>
+                <bean class="com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor">
+                    <property name="dialectClass"
+                              value="com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect"></property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!--配置mybatis mapper接口-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.zhx.*.mapper"/>
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+    <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--初始化 SpringContextHolder-->
+    <bean id="SpringContextHolder" class="com.zhx.quartz.utils.SpringContextHolder"/>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

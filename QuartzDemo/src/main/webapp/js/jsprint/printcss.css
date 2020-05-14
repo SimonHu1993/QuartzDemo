@@ -1,0 +1,23 @@
+@media print{
+	body{ font-size:12px; background:#fff; }
+	body,p,em,td,th,h1,h2,h3,h4,h5{ font-size:12px; padding:0; margin:0; }
+	em{ font-style:normal;}
+	.printpage{ width:794px; height:1123px; margin:0 auto;}
+	.printpage p,.printpage div, .printpage em , .printpage td, .printpage th, .printpage h1, .printpage h2,.printpage table{ font-size:16px; font-family:"微软雅黑",Arial, Helvetica, sans-serif; color:#000;}
+	.printpage p,.printpage em,.printpage th,.printpage td,.printpage h1,.printpage h2{ line-height:1.6em;}
+	.printpage p{ text-indent:2em; padding-bottom:0.6em; }
+	.printpage p em{ font-weight:bold; }
+	.p_section{ padding:0.5em 0 1.2em;}
+	
+	.printpage .head{ text-align:center; height:2em; line-height:2em; font-size:20px;}
+	.printpage  .addressee{ margin-bottom:0.5em; font-weight:normal; }
+	.printpage table{ border-collapse:collapse; }
+	.printpage .tablewrap{ padding:0.5em 2em;}
+	.printpage  .tab01{ width:100%; background:#f2f2f2; margin-bottom:0.6em;}
+	.printpage  .tab01 td{ border:none; line-height:2em; padding-left:2em;}
+	.printpage  .tab02{ margin-bottom:0.6em;}
+	.printpage  .tab02 td{ line-height:2em;  padding-left:2em;}
+	.printpage  .tab03{ margin-bottom:0.6em; border:1px solid #ccc; width:100%; }
+	.printpage  .tab03 td,.printpage  .tab03 th{ line-height:2em;  border:1px solid #ccc; padding:0 1em;  text-align:center; }
+	.printpage  .tab03 th.tright,.printpage  .tab03 td.tright{ text-align:right; }
+}

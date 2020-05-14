@@ -1,0 +1,142 @@
+
+.contain {
+    font-size: medium;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.big-pic {
+    padding: 0.4rem 0;
+}
+.big-pic img {
+    width: 6.4rem;
+    margin: auto;
+    display: block;
+}
+.describe-jd {
+    /*width: 100%;*/
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.32rem;
+    box-shadow: inset 0 1px 0 0 #DEDEDE, inset 0 -1px 0 0 #DEDEDE;
+    color: #333333;
+    padding-left: 0.34rem
+}
+.describe-card {
+    /*width: 100%;*/
+    line-height: 0.88rem;
+    font-size: 0.32rem;
+    box-shadow: inset 0 1px 0 0 #DEDEDE, inset 0 -1px 0 0 #DEDEDE;
+    color: #333333;
+    padding-left: 0.34rem
+}
+.money-container {
+    padding-left: 0.34rem;
+}
+.choose-money {
+    font-size: 0.28rem;
+    color: #333333;
+    margin-top: 0.14rem;
+    display: block;
+}
+.money-container ul {
+    padding-top: 0.2rem;
+    padding-bottom: 0.26rem;
+}
+.money-container ul li {
+    width: 1.22rem;
+    height: 1.02rem;
+    line-height: 1.02rem;
+    float: left;
+    border: 1px solid #979797;
+    border-radius: 0.08rem;
+    margin-right: 0.18rem;
+    text-align: center;
+    font-size: 0.34rem;
+    color: #979797;
+    box-sizing: border-box;
+}
+.money-container ul .selected {
+    background: #C50600;
+    color: #ffffff;
+    /*border: none;*/
+}
+.preferential {
+    height: 0.88rem;
+    box-shadow: inset 0 1px 0 0 #DEDEDE, inset 0 -1px 0 0 #DEDEDE;
+    padding-left: 0.34rem;
+    padding-right: 0.26rem;
+}
+.used-gold {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.26rem;
+    color: #333333;
+    display: block;
+    padding-left: 0.46rem;
+    background: url("../image/wen.png");
+    background-size: 0.36rem 0.36rem;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.used-gold span {
+    color: #C50600;
+}
+.sold {
+    font-size: 0.24rem;
+    color: #646464;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+.introdition {
+    font-size: 0.28rem;
+    color: #F5A623;
+    line-height: 0.66rem;
+    padding-left: 0.34rem;
+}
+.introdition-img img {
+    width: 100%;
+    display: block;
+}
+.bottom {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 0.88rem;
+    z-index: 2;
+}
+.flexs-container {
+    display: flex;
+}
+.price {
+    width: 100%;
+    flex: 2;
+    text-align: right;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.26rem;
+    color: #333333;
+    box-shadow: inset 0 1px 0 0 #DEDEDE;
+    background: #ffffff;
+}
+.price .money-red {
+    font-size: 0.28rem;
+    color: #C50600;
+    vertical-align: middle;
+}
+.price .moeny-number {
+    font-size: 0.42rem;
+    color: #C50600;
+    margin-right: 0.29rem;
+    vertical-align: middle;
+}
+.buy {
+    width: 2.33rem;
+    height: 0.88rem;
+    text-align: center;
+    line-height: 0.88rem;
+    background: #C50600;
+    color: #FFFFFF;
+    font-size: 0.34rem;
+
+}

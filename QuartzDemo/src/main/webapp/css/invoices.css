@@ -1,0 +1,156 @@
+.shade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.shade .popout {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 7rem;
+  height: 4rem;
+  background: #fff;
+  border-radius: 0.3rem;
+}
+.shade .popout .content {
+  padding-top: 0.5rem;
+  font-size: 0.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.shade .popout .btn {
+  line-height: 1.5rem;
+  text-align: center;
+}
+.shade .popout .btn input {
+  width: 6rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.45rem;
+}
+.login-page h1 {
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+.login-page .item {
+  padding: 0.5rem;
+  font-size: 0.45rem;
+}
+.login-page .item label {
+  width: 3.2rem;
+  display: inline-block;
+}
+.login-page .item .tel {
+  width: 5rem;
+  height: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 0.15rem;
+  font-size: 0.45rem;
+  padding: 0 .1rem;
+}
+.login-page .item1 {
+  padding: 0.5rem;
+  font-size: 0.45rem;
+}
+.login-page .item1 label {
+  width: 3.2rem;
+  display: inline-block;
+}
+.login-page .item1 .v-code {
+  width: 1.8rem;
+  height: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 0.15rem;
+  font-size: 0.45rem;
+  padding: 0 .1rem;
+}
+.login-page .item1 .v-code-btn {
+  font-size: 0.45rem;
+  width: 3rem;
+  height: 0.8rem;
+}
+.login-page .submit {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.login-page .submit .s-btn {
+  width: 9rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.45rem;
+}
+.verify-page h1 {
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+.verify-page .item {
+  padding: 0.5rem;
+  font-size: 0.45rem;
+}
+.verify-page .item label {
+  width: 3.2rem;
+  display: inline-block;
+}
+.verify-page .item .tel {
+  width: 5rem;
+  height: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 0.15rem;
+  font-size: 0.45rem;
+  padding: 0 .1rem;
+}
+.verify-page .submit {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.verify-page .submit .s-btn {
+  width: 9rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.45rem;
+}
+.select-page h1 {
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+.select-page .hint {
+  padding-left: 0.5rem;
+  font-size: 0.45rem;
+}
+.select-page .radio li {
+  width: 8rem;
+  height: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 0.2rem;
+  margin: 0.5rem auto;
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: 0.55rem;
+}
+.select-page .radio .check {
+  background: #d20912;
+  color: #fff;
+}
+.select-page .submit {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.select-page .submit .s-btn {
+  width: 9rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.45rem;
+}

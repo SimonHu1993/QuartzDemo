@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,ul,li,p,h4,h2,h3,h1,h5,h6,embed,td,tr{ margin:0; padding:0;}
+b{ font-weight:bold;}
+ul li{ list-style:none; }
+.ft_l{ float:left;}
+.ft_r{ float:right;}
+.clera{ clear:both;}
+table{border-collapse:collapse;}
+area,input[type=text],textarea,input[type=submit],input[type=button],a:focus{ outline:none;}
+a{ text-decoration:none; cursor:pointer;}
+a{blr:expression(this.onFocus=this.blur());} /* 只支持IE，过多使用效率低 */
+input[type=submit],input[type=button]{ cursor:pointer; border:0;}
+a:focus { -moz-outline-style: none; } /* IE不支持 */
+a:hover{ color:#b8292f;}
+
+a img{ border:0; display:block;}
+html{-webkit-text-size-adjust:none;}
+/*默认样式 end*/
+body{ font-family:"Microsoft YaHei","微软雅黑","宋体",Arial, Helvetica, sans-serif; font-size:14px;
+-webkit-text-size-adjust:none; /*谷歌下字体能够小于12px*/
+background:#fff;
+}
+
+
+/**通用样式*/
+.cen{ width:1000px; margin:0 auto; overflow:hidden;}
+
+.o_c{ border:1px solid #c8c8c8; margin-bottom:30px;}
+
+.top{ height:90px; background:url(/images/top_bg.png) repeat-x; border-bottom:3px solid #9f1c25; margin-bottom:20px;}
+.logo img{ width:156px; height:49px; margin:20px 30px 0 0;}
+.t_duih{ height:90px; line-height:90px; font-size:26px; color:#000;}
+
+
+.dh_dable{ border:0; margin:0 auto;}
+.dh_dable td{ padding:0 10px; font-size:14px; padding-bottom:20px;border-bottom:1px solid #e6e6e6; }
+.dh_dable td.td_l{ font-size:20px; width:100px; height:30px; line-height:30px;border:0; padding-bottom:0; padding-top:20px;}
+
+.dh_bt,.dh_danhao{  height:50px; font-size:20px; line-height:50px;color:#787878; text-align:center;}
+.dh_dable .dh_bt  td,.dh_dable .dh_danhao  td{ font-size:20px;}
+.dh_danhao{ text-align:left;  }
+.dh_danhao td{padding-left:30px;}
+
+.dh_phone{ height:50px; line-height:50px; margin:15px 0 15px 30px; font-size:18px; }
+.dh_phone input[type=text]{ height:47px; line-height:47px; font-size:18px; color:#323232; padding-left:10px; width:290px; margin:0 15px; border:1px solid #969696; background:#fff; vertical-align:middle; }
+input[type=button],input[type=submit]{  width:150px; font-size:18px; height:50px; background:#840000; color:#fff;}
+input[type=button].no_d,input[type=submit].no_d{ background:#b4b4b4; color:#999;}
+input[type=button]:active,input[type=submit]:active{ background:#680303;}
+.dh_smrz{ height:20px; margin:15px 0 25px 30px; font-size:18px; color:#787878;}
+.dh_smrz b{ color:#f10000;}
+.dh_phone input[type=text].rz_name{ width:180px; margin-right:25px;}
+.dh_phone input[type=text]#realname{ width:100px;}
+.dh_phone input[type=text]#idcardNo{ width:230px;}
+.dh_phone input[type=text].rz_sfzh{ width:320px;}
+.rz_sm{}
+
+.bd_ka{ margin:20px 0 30px 0; overflow:hidden;}
+.renz{height:160px;  width:350px; overflow:hidden; margin-right:30px; padding:2px; border:2px #fff solid; font-size:16px;}
+.renz_h{height: 330px;}
+.renz input[type=radio]{ float:left; margin-right:5px;}
+.rebnz_ka{ width:315px; border:1px solid #ccc; text-align:center; overflow:hidden; float:left;}
+.ka_hao{ height:50px; line-height:50px;}
+.ka_duih{ height:50px; line-height:50px; border-top:1px solid #ccc; border-right:1px solid #ccc; width:157px;}
+.ka_duih.ft_r{ border-right:0;}
+
+.duih_jieg{ background:#eefaff; border:1px solid #a3d1ec; margin:0 10px 0 30px;}
+
+.dh_phone input[type=text].renz_newka{ width:250px;}
+
+
+.huodong{ padding:20px 0; overflow:hidden;}
+.huod_xx{ overflow:hidden; margin-right:30px;}
+.huod_xx input[type=radio]{ float:left; margin:20px 10px 0 0;}
+.huod_xxp{ padding:0 30px; height:50px; line-height:50px; font-size:18px; border:2px solid #ccc; float:left; background:#f7f7f7;}
+
+.dhlb,.duih_jg{ height:40px; line-height:30px; margin:20px 0; font-size:16px; text-align:center; font-weight:bold; color:#005ea7; border-bottom:1px solid #a3d1ec; padding-left:10px; }
+.duihlb{ overflow:hidden;}
+.duihlb li {overflow:hidden; position:relative; height:52px;}
+.duihlb li.last_li{ width:42px; margin-right:0;}
+.duihlb li b{ position:absolute; width:15px; height:15px; line-height:15px; text-align:center; right:5px; top:10px; cursor:pointer;}
+.duihlb li p{ position:relative; float:left; margin:8px 20px 8px 0;  border:1px solid #333;width:160px; height:40px; background:#fff;}
+.duihlb li input[type=text]{ width:150px; height:20px; margin:9px auto 0 auto; font-size:16px; text-align:center; color:#969696; border:0;background:#fff;}
+.duihlb li input[type=text]::-ms-clear{display: none;}
+#duihlb li i{ display:block; position:absolute; right:20px; top:20px; background:url(/images/jian.png) no-repeat; width:20px; height:20px;  cursor:pointer; }
+#duihlb li i.jia_ico{ background-image:url(/images/jia.png);}
+.dhlb_tj { text-align:center; padding:20px 0; position:relative; height:50px; line-height:50px; }
+.dhlb_tj input[type=submit]{ margin-right:20px;}
+.dhlb_tj span{ position:absolute; left:50%; margin-left:80px;color:#005ea7; font-size:14px;}
+.duih_jg{ font-size:16px; text-align:left; margin:15px 10px;}
+.duih_ror{ color:#f00;}
+.duih_jgul{ margin-left:25px; margin-bottom:10px;}
+.duih_jgul li{ margin-right:0px; margin-bottom:20px; height:auto; min-height:52px;}
+.duih_jgul li div{ float:left;}
+.duih_jgul li p{ width:140px; height:auto; min-height:40px; line-height:40px; text-align:center; font-size:16px; color:#005ea7; background:#fff; display:block; float:left; margin-right:30px; border:1px solid #dcf4fe;}
+.duih_jgul li span{ display:block; color:#f00; font-size:13px;clear:both}
+
+.duih_pr { text-align:center; padding:10px 0;}
+.duih_pr input{ margin:0 25px;}
+
+
+.fd_dh{ position:fixed; width:100px; border:1px solid #c8c8c8; top:50%; left:50%; margin:-200px 0 0 -601px;}
+.fd_dh p{ text-align:center; height:21px; width:100px; padding:8px 0; }
+.fd_dh a{ display:block; width:100px; border-top:1px solid #c8c8c8; height:40px; line-height:40px; color:#323232; text-align:center; font-size:16px;}
+.fd_dh a:hover{ background:#aa0000; color:#fff;}
+
+.jz_input{ background:#f4f4f4!important; color:#ccc!important;}
+.dengd{ margin-left: 20px; color: #666;}
+.sm_pic{ position: relative;}
+.card_pic{ position: absolute; z-index: 10; right: 30px; top:10px; overflow: hidden;}
+.card_pic img{ float: left; height: 80px; margin-right: 10px;}
