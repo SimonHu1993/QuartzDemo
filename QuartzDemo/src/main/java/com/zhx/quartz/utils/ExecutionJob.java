@@ -54,6 +54,19 @@ public class ExecutionJob extends QuartzJobBean {
             // 任务状态
             log.setIsSuccess(true);
             logger.info("任务执行完毕，任务名称：{} 总共耗时：{} 毫秒", quartzJob.getJobName(), times);
+            logger.info("-----------------Quartz线程 活动情况-------------------------------------");
+            int queueSize = EXECUTOR.getQueue().size();
+            logger.info("当前排队线程数：" + queueSize);
+    
+            int activeCount = EXECUTOR.getActiveCount();
+            logger.info("当前活动线程数：" + activeCount);
+    
+            long completedTaskCount = EXECUTOR.getCompletedTaskCount();
+            logger.info("执行完成线程数：" + completedTaskCount);
+    
+            long taskCount = EXECUTOR.getTaskCount();
+            logger.info("总线程数：" + taskCount);
+            logger.info("-----------------Quartz线程 活动情况-------------------------------------");
         } catch (Exception e) {
             logger.error("任务执行失败，任务名称：{}" + quartzJob.getJobName(), e);
             long times = System.currentTimeMillis() - startTime;
