@@ -1,4 +1,4 @@
-package com.zhx.quartz.config;
+package com.simonhu.quartz.config;
 
 import org.quartz.Scheduler;
 import org.springframework.context.annotation.Bean;

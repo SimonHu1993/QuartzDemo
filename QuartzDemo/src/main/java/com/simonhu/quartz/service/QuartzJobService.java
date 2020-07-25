@@ -1,11 +1,11 @@
-package com.zhx.quartz.service;
+package com.simonhu.quartz.service;
 
 import com.github.miemiedev.mybatis.paginator.domain.PageList;
-import com.zhx.quartz.domain.QuartzJob;
-import com.zhx.quartz.domain.QuartzLog;
-import com.zhx.quartz.mapper.QuartzJobMapper;
-import com.zhx.quartz.mapper.QuartzLogMapper;
-import com.zhx.quartz.utils.QuartzManage;
+import com.simonhu.quartz.domain.QuartzJob;
+import com.simonhu.quartz.domain.QuartzLog;
+import com.simonhu.quartz.mapper.QuartzJobMapper;
+import com.simonhu.quartz.mapper.QuartzLogMapper;
+import com.simonhu.quartz.utils.QuartzManage;
 import org.quartz.CronExpression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -162,7 +162,7 @@ public class QuartzJobService extends BaseService {
     
     /**
      * @param id
-     * @return com.zhx.quartz.domain.QuartzJob
+     * @return com.simonhu.quartz.domain.QuartzJob
      * @Description:查询定时任务
      * @Author:SimonHu
      * @Date: 2020/5/14 10:55

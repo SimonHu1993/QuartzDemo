@@ -1,6 +1,6 @@
-package com.zhx.quartz.mapper;
+package com.simonhu.quartz.mapper;
 
-import com.zhx.quartz.domain.QuartzJob;
+import com.simonhu.quartz.domain.QuartzJob;
 
 import java.util.List;
 import java.util.Map;

@@ -1,7 +1,7 @@
-package com.zhx.quartz.utils;
+package com.simonhu.quartz.utils;
 
-import com.zhx.quartz.domain.QuartzJob;
-import com.zhx.quartz.mapper.QuartzJobMapper;
+import com.simonhu.quartz.domain.QuartzJob;
+import com.simonhu.quartz.mapper.QuartzJobMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

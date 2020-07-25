@@ -1,4 +1,4 @@
-package com.zhx.quartz.utils;
+package com.simonhu.quartz.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.zhx.quartz.task;
+package com.simonhu.quartz.task;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

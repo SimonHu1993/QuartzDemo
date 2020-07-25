@@ -1,4 +1,4 @@
-package com.zhx.quartz.utils;
+package com.simonhu.quartz.utils;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package com.zhx.quartz.utils;
+package com.simonhu.quartz.utils;
 
-import com.zhx.quartz.domain.QuartzJob;
+import com.simonhu.quartz.domain.QuartzJob;
 import org.quartz.*;
 import org.quartz.impl.triggers.CronTriggerImpl;
 import org.slf4j.Logger;

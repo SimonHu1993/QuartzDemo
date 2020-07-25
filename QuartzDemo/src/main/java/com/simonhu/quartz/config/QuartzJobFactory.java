@@ -1,4 +1,4 @@
-package com.zhx.quartz.config;
+package com.simonhu.quartz.config;
 /**
  * @Author: SimonHu
  * @Date: 2020/5/13 16:47

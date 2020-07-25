@@ -1,4 +1,4 @@
-package com.zhx.quartz.service;
+package com.simonhu.quartz.service;
 
 /**
  * Created by mulder on 15/5/14.

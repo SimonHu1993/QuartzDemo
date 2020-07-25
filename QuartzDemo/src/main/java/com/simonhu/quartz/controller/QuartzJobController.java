@@ -1,10 +1,10 @@
-package com.zhx.quartz.controller;
+package com.simonhu.quartz.controller;
 
-import com.zhx.page.Page;
-import com.zhx.quartz.domain.QuartzJob;
-import com.zhx.quartz.domain.QuartzLog;
-import com.zhx.quartz.mapper.QuartzLogMapper;
-import com.zhx.quartz.service.QuartzJobService;
+import com.simonhu.page.Page;
+import com.simonhu.quartz.domain.QuartzJob;
+import com.simonhu.quartz.domain.QuartzLog;
+import com.simonhu.quartz.mapper.QuartzLogMapper;
+import com.simonhu.quartz.service.QuartzJobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

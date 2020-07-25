@@ -1,45 +1,38 @@
-package com.zhx.quartz.domain;
+package com.simonhu.quartz.domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-/**
- * @author Zheng Jie
- * @date 2019-01-07
- */
-public class QuartzJob implements Serializable {
-    public static final String JOB_KEY = "JOB_KEY";
+public class QuartzLog implements Serializable {
+
     private Long id;
-    /**
-     * 定时器名称
-     */
+
+    /** 任务名称 */
     private String jobName;
-    /**
-     * Bean名称
-     */
+
+    /** Bean名称 */
     private String beanName;
-    /**
-     * 方法名称
-     */
+
+    /** 方法名称 */
     private String methodName;
-    /**
-     * 参数
-     */
+
+    /** 参数 */
     private String params;
-    /**
-     * cron表达式
-     */
+
+    /** cron表达式 */
     private String cronExpression;
-    /**
-     * 状态
-     */
-    private Boolean isPause = false;
-    /**
-     * 备注
-     */
-    private String remark;
+
+    /** 状态 */
+    private Boolean isSuccess;
+
+    /** 异常详细 */
+    private String exceptionDetail;
+
+    /** 耗时（毫秒） */
+    private Long time;
+
+    /** 创建日期 */
     private Timestamp createTime;
-    private int status;
     
     public Long getId() {
         return id;
@@ -89,20 +82,28 @@ public class QuartzJob implements Serializable {
         this.cronExpression = cronExpression;
     }
     
-    public Boolean getIsPause() {
-        return isPause;
+    public Boolean getIsSuccess() {
+        return isSuccess;
     }
     
-    public void setIsPause(Boolean pause) {
-        isPause = pause;
+    public void setIsSuccess(Boolean success) {
+        isSuccess = success;
     }
     
-    public String getRemark() {
-        return remark;
+    public String getExceptionDetail() {
+        return exceptionDetail;
     }
     
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setExceptionDetail(String exceptionDetail) {
+        this.exceptionDetail = exceptionDetail;
+    }
+    
+    public Long getTime() {
+        return time;
+    }
+    
+    public void setTime(Long time) {
+        this.time = time;
     }
     
     public Timestamp getCreateTime() {
@@ -111,13 +112,5 @@ public class QuartzJob implements Serializable {
     
     public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
-    }
-    
-    public int getStatus() {
-        return status;
-    }
-    
-    public void setStatus(int status) {
-        this.status = status;
     }
 }

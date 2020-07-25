@@ -1,8 +1,8 @@
-package com.zhx.quartz.utils;
+package com.simonhu.quartz.utils;
 
-import com.zhx.quartz.domain.QuartzJob;
-import com.zhx.quartz.domain.QuartzLog;
-import com.zhx.quartz.service.QuartzJobService;
+import com.simonhu.quartz.domain.QuartzJob;
+import com.simonhu.quartz.domain.QuartzLog;
+import com.simonhu.quartz.service.QuartzJobService;
 import org.quartz.JobExecutionContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

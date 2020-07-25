@@ -14,10 +14,10 @@
 	    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 	    http://www.springframework.org/schema/task
        http://www.springframework.org/schema/task/spring-task.xsd">
-	
+
 
     <!-- 扫描包 -->
-    <context:component-scan base-package="com.zhx" use-default-filters="false">
+    <context:component-scan base-package="com.simonhu" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
@@ -72,7 +72,7 @@
     <!-- 支持上传文件 -->
     <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>-->
     <!--初始化Scheduler-->
-    <bean id="quartzJobFactory" class="com.zhx.quartz.config.QuartzJobFactory"></bean>
+    <bean id="quartzJobFactory" class="com.simonhu.quartz.config.QuartzJobFactory"></bean>
     <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
         <property name="jobFactory" ref="quartzJobFactory"></property>
     </bean>
