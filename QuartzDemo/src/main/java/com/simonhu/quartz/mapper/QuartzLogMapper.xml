@@ -2,7 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.simonhu.quartz.mapper.QuartzLogMapper" >
   <select id="selectByPrimaryKey" resultType="com.simonhu.quartz.domain.QuartzLog" parameterType="java.util.HashMap" >
-    select  * from quartz_log
+   select id, bean_name, cron_expression, is_success, job_name, method_name, params, time,
+    <if test="id !=null">exception_detail</if>
+    <if test="id ==null or id ==''">
+      case
+      when LENGTH(exception_detail) > 0 then  1
+      else   0
+      end as  exception_detail
+    </if>
+     from quartz_log
     where 1=1
     <if test="id !=null">and  id = #{id,jdbcType=BIGINT}</if>
     order by id desc
