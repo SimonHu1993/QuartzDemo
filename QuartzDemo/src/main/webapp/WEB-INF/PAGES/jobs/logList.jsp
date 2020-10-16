@@ -28,7 +28,7 @@
                 {
                     field: 'exceptionDetail', title: '异常详情', width: '7%', fitColumns: true, align: 'center',
                     formatter: function (value, row, index) {
-                        if (!!value) {
+                        if (value == '1') {
                             var str = '<a style="color:blue" href="javascript:void(0)" onclick="check(\'' + row.id + '\')">' + "查看" + '</a>  '
                             return str;
                         } else {
