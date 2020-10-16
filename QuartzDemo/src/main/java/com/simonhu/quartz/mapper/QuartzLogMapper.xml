@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.simonhu.quartz.mapper.QuartzLogMapper" >
   <select id="selectByPrimaryKey" resultType="com.simonhu.quartz.domain.QuartzLog" parameterType="java.util.HashMap" >
-   select id, bean_name, cron_expression, is_success, job_name, method_name, params, time,
+   select id, bean_name,create_time, cron_expression, is_success, job_name, method_name, params, time,
     <if test="id !=null">exception_detail</if>
     <if test="id ==null or id ==''">
       case
