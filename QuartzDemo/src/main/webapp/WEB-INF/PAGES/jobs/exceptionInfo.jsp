@@ -4,8 +4,18 @@
 <html>
 <head>
     <title>异常详情</title>
+    <style>
+        pre{
+            width:100%;
+            white-space:pre-wrap; /* css3.0 */
+            white-space:-moz-pre-wrap; /* Firefox */
+            white-space:-pre-wrap; /* Opera 4-6 */
+            white-space:-o-pre-wrap; /* Opera 7 */
+            word-wrap:break-word; /* Internet Explorer 5.5+ */
+        }
+    </style>
 </head>
 <body>
-    <p>${data}</p>
+    <pre>${data}</pre>
 </body>
 </html>
