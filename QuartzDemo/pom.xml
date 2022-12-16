@@ -18,7 +18,7 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
 
-        <spring.version>4.0.7.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <mybatis.version>3.3.0</mybatis.version>
         <cxf.version>2.7.4</cxf.version>
         <slf4j.version>1.6.6</slf4j.version>
